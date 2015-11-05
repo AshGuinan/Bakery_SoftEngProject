@@ -1,0 +1,11 @@
+CREATE TABLE CustomerLogIn (PK_ID int(10) NOT NULL AUTO_INCREMENT, CustomerNum bigint(19) NOT NULL, PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE Customer (PK_ID int(10) NOT NULL AUTO_INCREMENT, CustomerNum bigint(19) NOT NULL, CustomerName varchar(255), CustomerAddress varchar(255), PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE CreateCustomer (PK_ID int(10) NOT NULL AUTO_INCREMENT, CustomerName varchar(255), CustomerNumber int(10) NOT NULL, CustomerAddress varchar(255), PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE Class (PK_ID int(10) NOT NULL AUTO_INCREMENT, PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE `Order` (PK_ID int(10) NOT NULL AUTO_INCREMENT, Price double NOT NULL, Confirmation tinyint(1) NOT NULL, PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE Product (PK_ID int(10) NOT NULL AUTO_INCREMENT, FK_OrderLine int(10) NOT NULL, CakeType varchar(255), Price float NOT NULL, `Size` int(10) NOT NULL, PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE OrderLine (PK_ID int(10) NOT NULL AUTO_INCREMENT, Product int(10), Quantity int(10) NOT NULL, TotalPrice float NOT NULL, ID int(10) NOT NULL, Message varchar(255), PRIMARY KEY (PK_ID)) type=InnoDB;
+CREATE TABLE Order_OrderLine (FK_Order int(10) NOT NULL, FK_OrderLine int(10) NOT NULL, PRIMARY KEY (FK_Order, FK_OrderLine)) type=InnoDB;
+ALTER TABLE Order_OrderLine ADD INDEX FKOrder_Orde361348 (FK_Order), ADD CONSTRAINT FKOrder_Orde361348 FOREIGN KEY (FK_Order) REFERENCES `Order` (PK_ID);
+ALTER TABLE Order_OrderLine ADD INDEX FKOrder_Orde379903 (FK_OrderLine), ADD CONSTRAINT FKOrder_Orde379903 FOREIGN KEY (FK_OrderLine) REFERENCES OrderLine (PK_ID);
+ALTER TABLE Product ADD INDEX FKProduct266681 (FK_OrderLine), ADD CONSTRAINT FKProduct266681 FOREIGN KEY (FK_OrderLine) REFERENCES OrderLine (PK_ID);
