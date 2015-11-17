@@ -42,6 +42,9 @@ import javax.persistence.*;
 public class Cake {
 
     @Id
+    @Column (name="ID")
+    private String ID;
+    
     @Column(name = "CakeName")
     private String cakeName;
 
@@ -57,12 +60,16 @@ public class Cake {
     public Cake() {
     }
 
-    public Cake(String cakeName, String Ingredients, String Stock) {
+    public Cake(String ID, String cakeName, String Ingredients, String Stock) {
+        this.ID = ID;
         this.cakeName = cakeName;
         this.ingredients = Ingredients;
         this.stock  = Stock;
     }
 
+    public String getID(){
+        return this.ID;
+    }
     public String getCake() {
         return this.cakeName;
     }

@@ -68,12 +68,13 @@ public class CreateCakeServlet extends HttpServlet {
         try {
             
             //Get the data from user's form
+            String ID = (String) request.getParameter("ID");
             String cakeName = (String) request.getParameter("CakeName");
             String ingredients  = (String) request.getParameter("Ingredients");
             String stock   = (String) request.getParameter("Stock");
             
             //Create a cake instance out of it
-            Cake cake = new Cake(cakeName, ingredients, stock);
+            Cake cake = new Cake(ID, cakeName, ingredients, stock);
             
             //begin a transaction
             utx.begin();

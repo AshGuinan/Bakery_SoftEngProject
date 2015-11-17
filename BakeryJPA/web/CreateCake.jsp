@@ -45,11 +45,12 @@
     <h1>Create a Cake record</h1>
     <form id="createCakeForm" action="CreateCake" method="post">
     <table>
+        <tr><td>Cake:</td><td><input type="text" id = "ID" name="ID" /></td></tr>
         <tr><td>Cake:</td><td><input type="text" id = "cakeName" name="cakeName" /></td></tr>
         <tr><td>Ingredients</td><td><input type="text" id = "ingredients" name="ingredients" /></td></tr>
         <tr><td>Stock</td><td><input type="text" id = "stock" name="stock" /></td></tr>
     </table>
-    <input type="submit" id="CreateRecord" value="CreateRecord" />
+    <input type="submit" id="CreateCake" value="CreateCake" />
     </form>
 <a href="ListCake"><strong>Go to List of Cakes</strong></a>
 </body>
