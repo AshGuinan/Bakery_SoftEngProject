@@ -46,12 +46,14 @@
     
 <table id="cakeListTable" border="3">
 <tr >
+    <th bgcolor=>ID</th>
     <th bgcolor=>Cake Name</th>
     <th bgcolor=>Ingredients</th>
     <th bgcolor=>Stock</th>
 </tr>
-<c:forEach var="cake" begin="0" items="${requestScope.cakeList}">
+<c:forEach var="cake" begin="0" items="${cakeList}">
 <tr>
+    <td>${cake.ID}&nbsp;&nbsp;</td> 
     <td>${cake.cakeName}&nbsp;&nbsp;</td> 
     <td>${cake.ingredients}&nbsp;&nbsp;</td> 
     <td>${cake.stock}&nbsp;&nbsp;</td> 

@@ -46,13 +46,13 @@ public class Cake {
     private String ID;
     
     @Column(name = "CakeName")
-    private String cakeName;
+    private String CakeName;
 
     @Column(name = "Ingredients")
-    private String ingredients;
+    private String Ingredients;
 
     @Column(name = "Stock")
-    private String stock;
+    private String Stock;
 
     /**
      * Creates a new instance of Cake
@@ -62,24 +62,24 @@ public class Cake {
 
     public Cake(String ID, String cakeName, String Ingredients, String Stock) {
         this.ID = ID;
-        this.cakeName = cakeName;
-        this.ingredients = Ingredients;
-        this.stock  = Stock;
+        this.CakeName = cakeName;
+        this.Ingredients = Ingredients;
+        this.Stock  = Stock;
     }
 
     public String getID(){
         return this.ID;
     }
-    public String getCake() {
-        return this.cakeName;
+    public String getCakeName() {
+        return this.CakeName;
     }
 
     public String getStock() {
-        return this.stock;
+        return this.Stock;
     }
 
     public String getIngredients() {
-        return this.ingredients;
+        return this.Ingredients;
     }
     
 }

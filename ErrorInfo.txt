@@ -1,15 +1,4 @@
-exception
+18/11
 
-javax.servlet.ServletException: javax.servlet.ServletException: org.apache.jasper.JasperException: javax.el.PropertyNotFoundException: The class 'enterprise.web_jpa_war.entity.Cake' does not have the property 'cakeName'.
-
-root cause
-
-javax.servlet.ServletException: org.apache.jasper.JasperException: javax.el.PropertyNotFoundException: The class 'enterprise.web_jpa_war.entity.Cake' does not have the property 'cakeName'.
-
-root cause
-
-org.apache.jasper.JasperException: javax.el.PropertyNotFoundException: The class 'enterprise.web_jpa_war.entity.Cake' does not have the property 'cakeName'.
-
-root cause
-
-javax.el.PropertyNotFoundException: The class 'enterprise.web_jpa_war.entity.Cake' does not have the property 'cakeName'.
+All's good! :D
+Now onto implementing a facade class and deleting cakes! Perhaps even log-in!
