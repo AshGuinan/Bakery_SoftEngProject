@@ -1,3 +1,10 @@
+UPDATE:18/11
+Well, that was nice while it lasted.
+Tried [and failed] to implement deletion functionality. 
+Code has been commented out that results in a null pointer exception, the one we have at the moment just doesn't seem to run.
+Mind you, it's basically complaining about DB connectivity -- could be just me here.
+
+
 18/11
 
 All's good! :D

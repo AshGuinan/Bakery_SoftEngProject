@@ -46,6 +46,14 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     <head>
     </head>
     <body>
-    <jsp:forward page="ListCake" />
+        <h1>Welcome to the Bakery!</h1>
+        <br>
+        <br>
+        <p>What would you like to do today? <br>
+        <ul>
+            <li><a href="ListCake.jsp">Look at our menu</a></li>
+            <li><a href="CreateCake.jsp">Make a Custom Cake</a></li>
+            <li><a href="RemoveCake.jsp">Delete a Cake</a></li>
+        </ul></p>
     </body>
 </html>

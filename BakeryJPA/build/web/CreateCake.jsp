@@ -53,5 +53,6 @@
     <input type="submit" id="CreateCake" value="CreateCake" />
     </form>
 <a href="ListCake"><strong>Go to List of Cakes</strong></a>
+<a href="index.jsp"><strong>Home</strong></a>
 </body>
 </html>
