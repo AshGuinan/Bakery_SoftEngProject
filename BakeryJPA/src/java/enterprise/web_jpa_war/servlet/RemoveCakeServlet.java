@@ -45,18 +45,16 @@ public class RemoveCakeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         assert emf != null;  //Make sure injection went through correctly.
-        EntityManager em = null;
+        EntityManager em = emf.createEntityManager();
+        
+         em.getTransaction().begin();
        
-        String ID = (String) request.getParameter("ID");
-        
-        int executeUpdate = em.createQuery("DELETE from Cake WHERE ID = 3").executeUpdate();
-        
-        //Run commented code for a null exception
-        
-//          Cake cake = em.find(Cake.class, 3);
-//        em.getTransaction().begin();
-//        em.remove(cake);
-//        em.getTransaction().commit();
+    Cake findCake = em.find(Cake.class, 2);
+    if (findCake == null) {
+      System.out.println("Cake not found! ");
+    } else {
+      System.out.println("Found Cake!");
+    }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/src/java/enterprise/web_jpa_war/entity/Cake.java</file>
+            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/src/java/enterprise/web_jpa_war/servlet/RemoveCakeServlet.java</file>
             <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/web/CreateCake.jsp</file>
+            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/web/RemoveCake.jsp</file>
+            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/src/java/enterprise/web_jpa_war/servlet/ListCakeServlet.java</file>
             <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/src/java/enterprise/web_jpa_war/servlet/CreateCakeServlet.java</file>
         </group>
     </open-files>

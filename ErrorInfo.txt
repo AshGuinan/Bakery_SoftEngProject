@@ -1,3 +1,7 @@
+19/11:
+java.lang.IllegalStateException: 
+Exception Description: Cannot use an EntityTransaction while using JTA.
+
 UPDATE:18/11
 Well, that was nice while it lasted.
 Tried [and failed] to implement deletion functionality. 
