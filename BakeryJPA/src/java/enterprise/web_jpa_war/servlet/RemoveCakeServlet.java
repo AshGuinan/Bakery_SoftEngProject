@@ -8,6 +8,7 @@ package enterprise.web_jpa_war.servlet;
 import enterprise.web_jpa_war.entity.Cake;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -47,14 +48,25 @@ public class RemoveCakeServlet extends HttpServlet {
         assert emf != null;  //Make sure injection went through correctly.
         EntityManager em = emf.createEntityManager();
         
-         em.getTransaction().begin();
+         try {
+            em = emf.createEntityManager();
+            Cake findCake = em.find(Cake.class, 2);
+            if (findCake == null) {
+              System.out.println("Cake not found! ");
+            } else {
+              System.out.println("Found Cake!");
+            }
+            
+        } catch (Exception ex) {
+            throw new ServletException(ex);
+        } finally {
+            //close the em to release any resources held up by the persistebce provider
+            if(em != null) {
+                em.close();
+            }
+        }
        
-    Cake findCake = em.find(Cake.class, 2);
-    if (findCake == null) {
-      System.out.println("Cake not found! ");
-    } else {
-      System.out.println("Found Cake!");
-    }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

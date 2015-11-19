@@ -1,6 +1,13 @@
 19/11:
-java.lang.IllegalStateException: 
-Exception Description: Cannot use an EntityTransaction while using JTA.
+javax.servlet.ServletException: 
+java.lang.IllegalArgumentException: You have provided an instance of an incorrect PK class for this find operation.  
+Class expected : class java.lang.String, Class received : class java.lang.Integer.
+
+root cause
+
+java.lang.IllegalArgumentException: You have provided an instance of an incorrect PK class for this find operation.  Class expected : class java.lang.String, Class received : class java.lang.Integer.
+
+note The full stack traces of the exception and its root causes are available in the GlassFish Server Open Source Edition 4.1 logs.
 
 UPDATE:18/11
 Well, that was nice while it lasted.
