@@ -49,14 +49,20 @@ public class RemoveCakeServlet extends HttpServlet {
         EntityManager em = emf.createEntityManager();
         
          try {
+             utx.begin();
+             //Find cake code -- do not edit!
+            String ID = (String) request.getParameter("ID");
             em = emf.createEntityManager();
-            Cake findCake = em.find(Cake.class, "2");
+            Cake findCake = em.find(Cake.class, ID);
             if (findCake == null) {
               System.out.println("Cake not found! ");
             } else {
               System.out.println("Found Cake!");
+              em.remove(findCake);
             }
+            utx.commit();
             
+            request.getRequestDispatcher("ListCake").forward(request, response);
         } catch (Exception ex) {
             throw new ServletException(ex);
         } finally {
@@ -65,8 +71,6 @@ public class RemoveCakeServlet extends HttpServlet {
                 em.close();
             }
         }
-       
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
