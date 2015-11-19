@@ -52,7 +52,7 @@ public class Cake {
     private String Ingredients;
 
     @Column(name = "Stock")
-    private String Stock;
+    private int Stock;
 
     /**
      * Creates a new instance of Cake
@@ -60,7 +60,7 @@ public class Cake {
     public Cake() {
     }
 
-    public Cake(String ID, String cakeName, String Ingredients, String Stock) {
+    public Cake(String ID, String cakeName, String Ingredients, int Stock) {
         this.ID = ID;
         this.CakeName = cakeName;
         this.Ingredients = Ingredients;
@@ -74,7 +74,7 @@ public class Cake {
         return this.CakeName;
     }
 
-    public String getStock() {
+    public int getStock() {
         return this.Stock;
     }
 

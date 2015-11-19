@@ -30,9 +30,11 @@ public class CreateCakeServlet extends HttpServlet {
     /** Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
      * @param response servlet response
+     * @throws javax.servlet.ServletException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException {
+      
+       throws ServletException {
         assert emf != null;  //Make sure injection went through correctly.
         EntityManager em = null;
         try {
@@ -41,7 +43,7 @@ public class CreateCakeServlet extends HttpServlet {
             String ID = (String) request.getParameter("ID");
             String cakeName = (String) request.getParameter("CakeName");
             String ingredients  = (String) request.getParameter("Ingredients");
-            String stock   = (String) request.getParameter("Stock");
+            int stock   = Integer.parseInt(request.getParameter("Stock"));
             
             //Create a cake instance out of it
             Cake cake = new Cake(ID, cakeName, ingredients, stock);
@@ -76,6 +78,7 @@ public class CreateCakeServlet extends HttpServlet {
      * @param request servlet request
      * @param response servlet response
      */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         processRequest(request, response);

@@ -50,7 +50,7 @@ public class RemoveCakeServlet extends HttpServlet {
         
          try {
             em = emf.createEntityManager();
-            Cake findCake = em.find(Cake.class, 2);
+            Cake findCake = em.find(Cake.class, "2");
             if (findCake == null) {
               System.out.println("Cake not found! ");
             } else {

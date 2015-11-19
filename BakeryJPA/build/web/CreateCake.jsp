@@ -48,7 +48,7 @@
         <tr><td>ID</td><td><input type="text" id = "ID" name="ID" /></td></tr>
         <tr><td>Cake:</td><td><input type="text" id = "cakeName" name="CakeName" /></td></tr>
         <tr><td>Ingredients</td><td><input type="text" id = "ingredients" name="Ingredients" /></td></tr>
-        <tr><td>Stock</td><td><input type="text" id = "stock" name="Stock" /></td></tr>
+        <tr><td>Stock</td><td><input type="number" id = "stock" name="Stock" /></td></tr>
     </table>
     <input type="submit" id="CreateCake" value="CreateCake" />
     </form>
