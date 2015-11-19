@@ -12,7 +12,7 @@
     </head>
     <body>
 
-    <h1>Create a Cake record</h1>
+    <h1>Remove a Cake record</h1>
     <form id="removeCakeForm" action="RemoveCake" method="post">
     <table>
         <tr><td>ID</td><td><input type="text" id = "ID" name="ID" /></td></tr>

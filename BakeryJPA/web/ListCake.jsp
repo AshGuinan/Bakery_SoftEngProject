@@ -62,6 +62,9 @@
 </c:forEach>
 
 </table>
+<a href="index.jsp"><strong>Home</strong></a>
+<a href="ListCake"><strong>Look at our menu</strong></a>
 <a href="CreateCake.jsp"><strong>Create a Cake Record</strong></a>
+<a href="RemoveCake.jsp"><strong>Delete a Cake</strong></a>
 </body>
 </html>
