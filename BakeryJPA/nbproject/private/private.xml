@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/web/CreateCake.jsp</file>
-            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/web/RemoveCake.jsp</file>
-            <file>file:/C:/Users/absin_000/Documents/NetBeansProjects/BakeryJPA/web/ListCake.jsp</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/java/enterprise/web_jpa_war/entity/CakeFacade.java</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/java/enterprise/web_jpa_war/entity/CakeManager.java</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/web/CreateCake.jsp</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/java/enterprise/web_jpa_war/entity/AbstractFacade.java</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/setup/glassfish-resources.xml</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/java/enterprise/web_jpa_war/servlet/CreateCakeServlet.java</file>
+            <file>file:/C:/Users/Donal/Downloads/Bakery_SoftEngProject-master%20(2)/Bakery_SoftEngProject-master/BakeryJPA/src/java/enterprise/web_jpa_war/entity/Cake.java</file>
         </group>
     </open-files>
 </project-private>
