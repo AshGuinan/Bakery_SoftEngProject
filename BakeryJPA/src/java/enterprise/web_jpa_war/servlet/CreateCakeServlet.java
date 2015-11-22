@@ -1,6 +1,7 @@
 package enterprise.web_jpa_war.servlet;
 
 import enterprise.web_jpa_war.entity.Cake;
+import enterprise.web_jpa_war.entity.CakeFacade;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +11,9 @@ import javax.persistence.PersistenceUnit;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.annotation.Resource;
+import javax.ejb.EJB;
 import javax.transaction.UserTransaction;
+
 
 
 /**
@@ -18,6 +21,8 @@ import javax.transaction.UserTransaction;
  */
 @WebServlet(name="CreateCakeServlet", urlPatterns={"/CreateCake"})
 public class CreateCakeServlet extends HttpServlet {
+   @EJB
+   private CakeFacade cakeFacade;
     
     @PersistenceUnit
     //The emf corresponding to 
@@ -25,6 +30,8 @@ public class CreateCakeServlet extends HttpServlet {
     
     @Resource
     private UserTransaction utx;
+    
+    
 
     
     /** Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -47,18 +54,19 @@ public class CreateCakeServlet extends HttpServlet {
             
             //Create a cake instance out of it
             Cake cake = new Cake(ID, cakeName, ingredients, stock);
-            
+            //teh facade classes do all the work
+            cakeFacade.create(cake);
             //begin a transaction
-            utx.begin();
+            //utx.begin();
             //create an em. 
             //Since the em is created inside a transaction, it is associsated with 
             //the transaction
-            em = emf.createEntityManager();
+            //em = emf.createEntityManager();
             //persist the cake entity
-            em.persist(cake);
+            //em.persist(cake);
             //commit transaction which will trigger the em to 
             //commit newly created entity into database
-            utx.commit();
+            //utx.commit();
             
             //Forward to ListCake servlet to list cakes along with the newly
             //created cake above

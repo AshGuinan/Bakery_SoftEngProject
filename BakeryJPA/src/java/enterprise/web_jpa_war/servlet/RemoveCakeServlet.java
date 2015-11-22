@@ -6,10 +6,12 @@
 package enterprise.web_jpa_war.servlet;
 
 import enterprise.web_jpa_war.entity.Cake;
+import enterprise.web_jpa_war.entity.CakeFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.annotation.Resource;
+import javax.ejb.EJB;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
@@ -26,7 +28,8 @@ import javax.transaction.UserTransaction;
  */
 @WebServlet(name = "RemoveCakeServlet", urlPatterns = {"/RemoveCake"})
 public class RemoveCakeServlet extends HttpServlet {
-
+    @EJB
+   private CakeFacade cakeFacade;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -49,18 +52,18 @@ public class RemoveCakeServlet extends HttpServlet {
         EntityManager em = emf.createEntityManager();
         
          try {
-             utx.begin();
+             //utx.begin();
              //Find cake code -- do not edit!
             String ID = (String) request.getParameter("ID");
             em = emf.createEntityManager();
-            Cake findCake = em.find(Cake.class, ID);
-            if (findCake == null) {
+            Cake cake = em.find(Cake.class, ID);
+            if (cake == null) {
               System.out.println("Cake not found! ");
             } else {
               System.out.println("Found Cake!");
-              em.remove(findCake);
+              cakeFacade.remove(cake);
             }
-            utx.commit();
+            //utx.commit();
             
             request.getRequestDispatcher("ListCake").forward(request, response);
         } catch (Exception ex) {
