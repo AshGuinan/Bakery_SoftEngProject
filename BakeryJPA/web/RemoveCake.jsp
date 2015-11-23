@@ -19,5 +19,10 @@
     </table>
     <input type="submit" id="RemoveCake" value="RemoveCake" />
     </form>
+    
+        <a href="index.jsp"><strong>Home</strong></a><br>
+<a href="ListCake"><strong>Look at our menu</strong></a><br>
+<a href="CreateCake.jsp"><strong>Create a Cake Record</strong></a><br>
+<a href="RemoveCake.jsp"><strong>Delete a Cake</strong></a><br>
 </body>
 </html>
