@@ -53,7 +53,7 @@ public class RemoveCakeServlet extends HttpServlet {
         
          try {
              //utx.begin();
-             //Find cake code -- do not edit!
+             
             String ID = (String) request.getParameter("ID");
             em = emf.createEntityManager();
             Cake cake = em.find(Cake.class, ID);

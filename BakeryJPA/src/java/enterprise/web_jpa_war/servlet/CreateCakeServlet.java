@@ -56,18 +56,7 @@ public class CreateCakeServlet extends HttpServlet {
             Cake cake = new Cake(ID, cakeName, ingredients, stock);
             //teh facade classes do all the work
             cakeFacade.create(cake);
-            //begin a transaction
-            //utx.begin();
-            //create an em. 
-            //Since the em is created inside a transaction, it is associsated with 
-            //the transaction
-            //em = emf.createEntityManager();
-            //persist the cake entity
-            //em.persist(cake);
-            //commit transaction which will trigger the em to 
-            //commit newly created entity into database
-            //utx.commit();
-            
+           
             //Forward to ListCake servlet to list cakes along with the newly
             //created cake above
             request.getRequestDispatcher("ListCake").forward(request, response);
